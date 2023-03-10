@@ -10,7 +10,7 @@ jobs:
       - name: "example output"
         id: "my_step"
         run: |
-          my_var = "Hello world"
+          my_var="Hello world"
           echo "Output [$my_var]"
           echo "my_var=$my_var" >> $GITHUB_OUTPUT
 
