@@ -1,0 +1,17 @@
+on:
+  workflow_dispatch:
+
+jobs:
+  job1:
+    name: "JOB1"
+    steps:
+      - name: "example output"
+        id: "my_step"
+        run: |
+          my_var = "Hello world"
+          echo "Output [$my_var]"
+          echo "my_var=$my_var" >> $GITHUB_OUTPUT
+
+      - name: "example receive"
+        run: |
+          echo "Output [${{steps.my_step.outputs.my_var}}]"
