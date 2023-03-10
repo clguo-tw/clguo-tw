@@ -1,8 +1,10 @@
+name: test
 on:
   workflow_dispatch:
 
 jobs:
   job1:
+    runs-on: ubuntu-latest
     name: "JOB1"
     steps:
       - name: "example output"
